@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #4c1d95;
+  --color-primary-light: #7c3aed;
+  --color-accent: #059669;
+  --color-ink: #18181b;
+  --color-surface: #fafaf9;
+  --font-display: "Sora", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-surface);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+/* Subtle 3D tilt used on product cards / feature tiles */
+.tilt-card {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+  transform-style: preserve-3d;
+}
+.tilt-card:hover {
+  transform: perspective(800px) rotateX(2deg) rotateY(-2deg) translateY(-4px);
+  box-shadow: 0 24px 48px -16px rgba(76, 29, 149, 0.25);
+}
+
+/* Layered gradient mesh used behind the hero */
+.mesh-bg {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.55), transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(5, 150, 105, 0.45), transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(76, 29, 149, 0.6), transparent 50%),
+    linear-gradient(135deg, #2e1065 0%, #4c1d95 55%, #1e1b4b 100%);
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(2deg); }
+}
+.float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tilt-card, .float-slow, html {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
