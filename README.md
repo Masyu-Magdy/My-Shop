@@ -237,6 +237,6 @@ MIT — feel free to use this project for learning or as a portfolio piece.
 
 **Masyu Magdy**
 
-- Portfolio: [your-portfolio-link.com](https://masyu-portfolio-sx7u.vercel.app/)
-- LinkedIn: [linkedin.com/in/your-profile](https://www.linkedin.com/in/masyu-magdy)
-- GitHub: [ github.com/your-username](https://github.com/Masyu-Magdy)
+- Portfolio: [masyu](https://masyu-portfolio-sx7u.vercel.app/)
+- LinkedIn: [masyu-magdy](https://www.linkedin.com/in/masyu-magdy)
+- GitHub: [Masyu-Magdy](https://github.com/Masyu-Magdy)
