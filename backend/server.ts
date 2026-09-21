@@ -1,3 +1,7 @@
+// Local development entry point only. On Vercel, requests go through
+// api/index.ts instead (see vercel.json) — this file is never executed
+// in production, since Vercel functions can't stay alive on a listening
+// port the way `app.listen` expects.
 import dotenv from "dotenv";
 dotenv.config();
 

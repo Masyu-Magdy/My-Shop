@@ -23,10 +23,17 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
-  title: { default: "Shoply | Shop smarter", template: "%s | Shoply" },
+  title: { default: "ShoppingCart", template: "%s | ShoppingCart" },
   description: "Discover the latest products at the best prices, with fast, reliable delivery.",
+  
+  icons: {
+    icon: "/cart.svg",
+    shortcut: "/cart.svg",
+    apple: "/cart.svg",
+  },
+  
   openGraph: {
-    title: "Shoply | Shop smarter",
+    title: "ShoppingCart",
     description: "Discover the latest products at the best prices, with fast, reliable delivery.",
     type: "website",
   },

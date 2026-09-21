@@ -23,6 +23,11 @@ import { errorHandler, notFound } from "./middleware/errorHandler";
 
 const app: Application = express();
 
+// Vercel sits in front of the app as a proxy, so Express needs to trust
+// the X-Forwarded-* headers it sets — otherwise express-rate-limit can't
+// tell requests apart and logs a ValidationError on every request.
+app.set("trust proxy", 1);
+
 // --- Security & Core Middleware ---
 app.use(helmet());
 app.use(
