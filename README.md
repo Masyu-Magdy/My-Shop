@@ -224,7 +224,7 @@ frontend/
 | Layer | Suggested host |
 | --- | --- |
 | Frontend (Next.js) | [Vercel](https://vercel.com) |
-| Backend (Express) | [Render](https://render.com) or [Railway](https://railway.app) |
+| Backend (Express) |  [Vercel](https://vercel.com) |
 | Database | [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) (free tier) |
 
 When deploying: point `MONGODB_URI` at Atlas, set `CLIENT_URL` (backend) and `NEXT_PUBLIC_API_URL` / `NEXT_PUBLIC_SITE_URL` (frontend) to your real deployed URLs, register a **production** Stripe webhook endpoint at `https://<your-backend>/api/payments/webhook`, and update `GOOGLE_CALLBACK_URL` if Google sign-in is enabled.
