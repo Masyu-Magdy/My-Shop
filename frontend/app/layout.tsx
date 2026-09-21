@@ -22,19 +22,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
-  title: { default: "ShoppingCart", template: "%s | ShoppingCart" },
-  description: "Discover the latest products at the best prices, with fast, reliable delivery.",
-  
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+  ),
+  title: { default: "MyShop", template: "%s | MyShop" },
+  description:
+    "Discover the latest products at the best prices, with fast, reliable delivery.",
+
   icons: {
     icon: "/cart.svg",
     shortcut: "/cart.svg",
     apple: "/cart.svg",
   },
-  
+
   openGraph: {
-    title: "ShoppingCart",
-    description: "Discover the latest products at the best prices, with fast, reliable delivery.",
+    title: "MyShop",
+    description:
+      "Discover the latest products at the best prices, with fast, reliable delivery.",
     type: "website",
   },
 };
@@ -43,7 +47,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" dir="ltr" className={`${sora.variable} ${inter.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      dir="ltr"
+      className={`${sora.variable} ${inter.variable}`}
+      suppressHydrationWarning
+    >
       <body>
         <ThemeRegistry>
           <ColorModeProvider>
